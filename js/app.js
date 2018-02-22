@@ -37,6 +37,7 @@ var propertiesObjectLength = Object.keys(questions).length;
 for (var i = 0; i < propertiesObjectLength; i++) {
   // devuelve el array de cada propiedad : 
   console.log(questions[propertiesObjectArray[i]]);
+
 }
 
 
@@ -50,25 +51,28 @@ for (var i = 0; i < propertiesObjectLength; i++) {
 
 
 // FUNCION RANDOM :
-function getPosition() {
+/* function getPosition() {
   return console.log(Math.trunc(Math.random() * (questions[propertiesObjectArray[1]].length - 0) + 0));
-}
+} */
 
 // agregando laas preguntas escogidas :
 
 var chosenQuestions = [];
 
 function getQuestions() {
-
-  var index = Math.trunc(Math.random() * (questions[propertiesObjectArray[1]].length - 0) + 0);
-
+  // ((questions[propertiesObjectArray[1]].length -1) - 0) + 0;
   //  questions[propertiesObjectArray[0]][temp]
- chosenQuestions.push(questions[propertiesObjectArray[0]][index]);
+   for(var i = 0 ; i <= 3 ; i++ ) { 
 
- return chosenQuestions;
+    var index =Math.trunc(Math.random() * ((questions[propertiesObjectArray[0]].length) - 0) + 0);
+    chosenQuestions.push(questions[propertiesObjectArray[0]][index]);
+  }  
+ // var index = Math.trunc(Math.random() * ((questions[propertiesObjectArray[0]].length) - 0) + 0);
+
+  return console.log(chosenQuestions);
+ //return console.log(index)
 }
 
-getPosition();
 getQuestions();
 
 
