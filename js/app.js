@@ -67,9 +67,15 @@ function getQuestions() {
   //  questions[propertiesObjectArray[0]][temp]
    for(var i = 0 ; i <= 3 ; i++ ) { 
 
-    var index =Math.trunc(Math.random() * ((questions[propertiesObjectArray[0]].length) - 0) + 0);
-    if (questions[propertiesObjectArray[0]][index] !== chosenQuestions[0] && questions[propertiesObjectArray[0]][index] !== chosenQuestions[1] && questions[propertiesObjectArray[0]][index] !== chosenQuestions[2]) {
-      chosenQuestions.push(questions[propertiesObjectArray[0]][index]);
+    if (questions[propertiesObjectArray[0]].length === 3) {
+      var index =Math.trunc(Math.random() * ((questions[propertiesObjectArray[0]].length) - 0) + 0);
+      if (questions[propertiesObjectArray[0]][index] !== chosenQuestions[0] && questions[propertiesObjectArray[0]][index] !== chosenQuestions[1] && questions[propertiesObjectArray[0]][index] !== chosenQuestions[2]) {
+        chosenQuestions.push(questions[propertiesObjectArray[0]][index]);
+      }
+
+      if (chosenQuestions.length !== 3) {
+        getQuestions();
+      };
     }
   }  
  // var index = Math.trunc(Math.random() * ((questions[propertiesObjectArray[0]].length) - 0) + 0);
