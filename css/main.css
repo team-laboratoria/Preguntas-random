@@ -1,0 +1,59 @@
+.hero {
+  background-image: url('../assets/images/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+} 
+
+x {
+  float: right;
+}
+
+y {
+  float: left;
+}
+.progress-bar-container {
+  margin: 2em 0 1em;
+  width: 100%;
+}
+
+.progress-counter-container{
+  margin-bottom: 1em;
+}
+
+  /* 100% entre 8 preguntas = 12.5%;*/
+.user-progress-bar {
+  width: 0%;
+}
+
+.counter-span {
+  margin-left: 0.7em;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  font-size: 12em;
+}
+
+.first-left-chevron {
+  color: #FF009E;
+}
+
+.second-left-chevron {
+  color: #56F89A;  
+}
+
+.third-left-chevron {
+  color: #FF009E;
+}
+
+.first-right-chevron {
+  color: #56F89A;
+}
+
+.second-right-chevron {
+  color: #FF009E;  
+}
+
+.third-right-chevron {
+  color: #56F89A;
+}
